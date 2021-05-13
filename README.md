@@ -1,5 +1,3 @@
-# Zuri--CRUD-App-With-Database
-
 # CRUD application with database
 
 
