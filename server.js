@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 const app = express();
 
@@ -7,8 +8,8 @@ app.use(express.json());
 
 //Connect to mongoDB database
 atlasConnectionString = "mongodb+srv://dbCRUD:tomeh@cluster0.daubu.mongodb.net/crudApp?retryWrites=true&w=majority";
-localConnectionString = "mongodb://localhost/crudkb";
-mongoose.connect(atlasConnectionString, {
+//localConnectionString = "mongodb://localhost/crudkb";
+mongoose.connect(process.env.MONGO_URI||atlasConnectionString, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
@@ -109,4 +110,4 @@ app.delete("/users/:id",(req, res) => {
 });
 
 //Server port
-app.listen(3000, () => console.log("server running..."));
+app.listen(process.env.PORT||3000, () => console.log("server running..."));
