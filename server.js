@@ -8,7 +8,7 @@ app.use(express.json());
 //Connect to mongoDB database
 atlasConnectionString = "mongodb+srv://dbCRUD:tomeh@cluster0.daubu.mongodb.net/crudApp?retryWrites=true&w=majority";
 localConnectionString = "mongodb://localhost/crudkb";
-mongoose.connect(localConnectionString, {
+mongoose.connect(atlasConnectionString, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
@@ -27,7 +27,7 @@ const dataSchema = new Schema({
 });
 
 //Model
-const userData = mongoose.model("information", dataSchema);
+const userData = mongoose.model("dataModels", dataSchema);
 
 //Routes
 // Get all users
