@@ -15,4 +15,4 @@ All routes were tested by Postman app to ensure full functionality.
 
 - [Tominiyi Orisatuyi]
 
-Host link:  http://zuri-crud-application-json.herokuapp.com/
+Host link:  http://zuri-crud-application-json.herokuapp.com/users
