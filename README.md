@@ -15,4 +15,4 @@ All routes were tested by Postman app to ensure full functionality.
 
 - [Tominiyi Orisatuyi]
 
-Host link?: Please bear with me, I'm having power supply issue at the moment. it should be ready in 2 hours from now. thank you
+Host link:  http://zuri-crud-application-json.herokuapp.com/
